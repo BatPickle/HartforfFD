@@ -1,0 +1,34 @@
+body, html{
+    padding: 0;
+    margin: 0 2rem;
+    height: 100%;
+}
+
+body{
+    background-image: url("img/bodyBackground.jpg");
+}
+
+#topNav{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 1rem;
+}
+
+#topNav ul{
+    border: 1px solid blue;
+    display: flex;
+    justify-content: center;
+}
+
+#topNav li{
+    border: 1px solid green;
+    list-style-type: none;
+    padding: 1rem;
+}
+
+#topNav a{
+    text-decoration: none;
+    color: black;
+}
