@@ -1,11 +1,17 @@
 body, html{
     padding: 0;
-    margin: 0 2rem;
+    margin: 0;
     height: 100%;
 }
 
 body{
     background-image: url("img/bodyBackground.jpg");
+}
+
+#sectionOne img{
+    width: 100%;
+    box-shadow: 0 8px 5px 0px rgb(63, 63, 63);
+    margin-bottom: 1rem;
 }
 
 #topNav{
@@ -14,21 +20,59 @@ body{
     align-items: center;
     justify-content: space-between;
     margin: 0 1rem;
+    background-color: #414141ba;
+    border: none;
+    border-radius: .5rem;
+    position: sticky;
+}
+
+#topNav img{
+    margin-left: 1rem;
 }
 
 #topNav ul{
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    gap: .5rem;
 }
 
 #topNav li{
-    border: 1px solid green;
+    /* border: 1px solid green; */
     list-style-type: none;
     padding: 1rem;
+    margin-right: 1rem;
+    background-color: #0d1b2a;
+    border: 2px solid #1b263b;
+    border-radius: .3rem;
 }
 
 #topNav a{
     text-decoration: none;
     color: black;
+    font-size: 1.2rem;
+    color: #bb9457;
+}
+
+
+
+/* Section Two */
+
+#sectionTwo{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 1rem;
+}
+
+#sectionTwoLeft{
+    max-width: 60%;
+    color: white;
+    text-align: center;
+}
+
+#sectionTwoLeft img{
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 8px;
 }
