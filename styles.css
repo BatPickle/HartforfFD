@@ -1,20 +1,21 @@
-body, html{
+body,
+html {
     padding: 0;
     margin: 0;
     height: 100%;
 }
 
-body{
+body {
     background-image: url("img/bodyBackground.jpg");
 }
 
-#sectionOne img{
+#sectionOne img {
     width: 100%;
     box-shadow: 0 8px 5px 0px rgb(63, 63, 63);
     margin-bottom: 1rem;
 }
 
-#topNav{
+#topNav {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
@@ -26,11 +27,11 @@ body{
     position: sticky;
 }
 
-#topNav img{
+#topNav img {
     margin-left: 1rem;
 }
 
-#topNav ul{
+#topNav ul {
     /* border: 1px solid blue; */
     display: flex;
     flex-wrap: wrap;
@@ -38,7 +39,7 @@ body{
     gap: .5rem;
 }
 
-#topNav li{
+#topNav li {
     /* border: 1px solid green; */
     list-style-type: none;
     padding: 1rem;
@@ -48,7 +49,7 @@ body{
     border-radius: .3rem;
 }
 
-#topNav a{
+#topNav a {
     text-decoration: none;
     color: black;
     font-size: 1.2rem;
@@ -56,37 +57,63 @@ body{
 }
 
 
+#navMenu {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+
+#menuToggle {
+    display: none;
+    /* Hide by default */
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #bb9457;
+    cursor: pointer;
+}
+
+
+
 
 /* Section Two */
 
-#sectionTwo{
+#sectionTwo {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     margin: 0 1rem;
+    padding-bottom: 5rem;
 }
 
-#sectionTwoLeft{
+#sectionTwoLeft {
     /* border: 1px solid yellow; */
-    max-width: 60%;
+    /* max-width: 40%; */
     color: white;
     text-align: center;
+    flex: 1;
+    min-width: 60%;
 }
 
-#sectionTwoLeft img{
+#sectionTwoLeft img {
     border: none;
     border-radius: 1rem;
     box-shadow: 8px;
+    max-width: 100%;
 }
 
 
-#sectionTwoRight{
+#sectionTwoRight {
     /* border: 1px solid blue; */
     color: white;
     text-align: center;
     margin-left: 3%;
+    flex: 1;
+    min-width: 20%;
 }
 
-#newEvents{
+#newEvents {
     /* border: 1px solid red; */
     height: 50%;
     border-radius: 1rem;
@@ -94,36 +121,67 @@ body{
     background-color: #454341;
 }
 
-#newEvents h2{
+#newEvents h2 {
     border-bottom: 2px solid #6b6b6b;
     padding-bottom: .5rem;
     font-size: 1.6rem;
 }
 
-#newEvents div{
+#newEvents div {
     padding: 0 1rem;
 }
 
-#information{
+#information {
     /* border: 1px solid purple; */
     margin-top: 2rem;
     border-radius: 1rem;
     background-color: #454341;
+    padding-bottom: 1rem;
 }
 
-#information h2{
+#information h2 {
     border-bottom: 2px solid #6b6b6b;
     font-size: 1.6rem;
     padding-bottom: .5rem;
 }
 
-#information ul{
+#information ul {
     list-style: none;
 }
 
-#information a{
+#information a {
     color: #bb9457;
     text-decoration: none;
     padding-right: 2rem;
     font-size: 1.2rem;
+}
+
+@media (max-width: 1150px) {
+    #sectionTwo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #sectionTwoLeft,
+    #sectionTwoRight {
+        max-width: 80%;
+    }
+}
+
+
+@media (max-width: 600px) {
+    #menuToggle {
+        display: block;
+    }
+
+    #navMenu {
+        display: none !important;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #navMenu.show {
+        display: flex !important;
+    }
+
 }
